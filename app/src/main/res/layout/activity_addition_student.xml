@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.AdditionStudentActivity">
+
+    <ImageView
+        android:id="@+id/imageViewAvatar"
+        android:layout_width="90dp"
+        android:layout_height="120dp"
+
+        android:src="@drawable/male_student"
+
+        android:layout_centerHorizontal="true"
+
+        android:layout_marginTop="30dp"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imageViewAvatar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="40dp">
+
+            <EditText
+                android:id="@+id/editName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                style="@style/AdditionStudentStyle"
+                android:maxLength="50"
+
+                android:hint="Name"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="@string/birth_date"
+                    style="@style/AdditionStudentStyle"
+
+                    android:layout_centerVertical="true"/>
+
+                <TextView
+                    android:id="@+id/txtBirthDateValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="1/1/1990"
+                    android:textColor="#4960E3"
+                    style="@style/AdditionStudentStyle"
+
+                    android:layout_centerInParent="true"/>
+
+                <ImageButton
+                    android:id="@+id/ibSelectBirthDate"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+
+                    style="@style/AdditionStudentStyle"
+
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/calendar"
+                    android:layout_alignParentEnd="true" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/txtSex"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    style="@style/AdditionStudentStyle"
+
+                    android:text="Sex: "
+
+                    android:layout_centerVertical="true"/>
+
+                <RadioGroup
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true">
+
+                    <RadioButton
+                        android:id="@+id/rbMale"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        style="@style/AdditionStudentStyle"
+
+                        android:text="Male"
+
+                        android:layout_centerInParent="true"/>
+
+                    <RadioButton
+                        android:id="@+id/rbFemale"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        style="@style/AdditionStudentStyle"
+
+                        android:text="Female"
+                        android:layout_alignParentRight="true"/>
+
+                </RadioGroup>
+
+            </RelativeLayout>
+
+            <EditText
+                android:id="@+id/editPhoneNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                style="@style/AdditionStudentStyle"
+                android:maxLength="12"
+                android:hint="Phone Number"
+
+                android:inputType="number"/>
+
+            <EditText
+                android:id="@+id/editMail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                style="@style/AdditionStudentStyle"
+
+                android:hint="Mail@gmail.com"/>
+
+            <Spinner
+                android:id="@+id/spinnerStudentPosition"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabAdditionStudentOptions"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+
+        android:layout_marginBottom="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginEnd="30dp"
+
+        android:src="@drawable/navigation"/>
+
+    <ImageButton
+        android:id="@+id/ibSaveAdditionStudent"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+
+        android:src="@drawable/save_foreground"
+        android:background="@drawable/circle_button"
+        android:scaleType="fitXY"
+
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_above="@id/fabAdditionStudentOptions"
+
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="38dp"
+
+        android:visibility="invisible"/>
+
+    <ImageButton
+        android:id="@+id/ibRefreshAdditionStudent"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+
+        android:src="@drawable/refresh_foreground"
+        android:background="@drawable/circle_button"
+        android:scaleType="fitXY"
+
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_above="@id/ibSaveAdditionStudent"
+
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="38dp"
+
+        android:visibility="invisible"/>
+
+</RelativeLayout>

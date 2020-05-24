@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_student_lv_item"
+    android:padding="12dp">
+
+    <ImageView
+        android:id="@+id/ivAvatar"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/male_student"
+
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="3dp"/>
+
+    <TextView
+        android:id="@+id/txtStudentName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="@string/student_name"
+        android:textSize="25sp"
+        android:textColor="#092AE3"
+        android:textStyle="normal"
+        android:textFontWeight="3"
+
+        android:fontFamily="sans-serif-medium"
+
+        android:layout_toRightOf="@+id/ivAvatar"
+        android:layout_toEndOf="@+id/ivAvatar" />
+
+    <TextView
+        android:id="@+id/txtStudentId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="ID"
+        android:textSize="18sp"
+        android:textColor="#DA1818"
+        android:textStyle="normal"
+        android:textFontWeight="3"
+
+        android:fontFamily="sans-serif-black"
+
+        android:layout_toRightOf="@+id/ivAvatar"
+        android:layout_below="@+id/txtStudentName"/>
+
+    <CheckBox
+        android:id="@+id/cbSelected"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:visibility="invisible"/>
+
+</RelativeLayout>
