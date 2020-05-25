@@ -1,5 +1,5 @@
 # Student-Management
-It's not complete, but i will!
+It's not completed, but i will be!
 
 # Prerequisite:  
   1. IDE: Android studio.  
